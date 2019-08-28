@@ -1,6 +1,13 @@
+<!--
+ * @Author: 刘攀
+ * @Date: 2019-08-28 15:15:17
+ * @LastEditors: 刘攀
+ * @LastEditTime: 2019-08-28 16:08:00
+ * @Description: file content
+ -->
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
     <router-view/>
   </div>
 </template>
@@ -11,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style >
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
