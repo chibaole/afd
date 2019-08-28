@@ -2,7 +2,7 @@
  * @Author: 刘攀
  * @Date: 2019-08-28 15:15:17
  * @LastEditors: 刘攀
- * @LastEditTime: 2019-08-28 17:15:15
+ * @LastEditTime: 2019-08-28 17:25:23
  * @Description: file content
  */
 import Vue from 'vue'
@@ -14,11 +14,11 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
+    // {
+    //   path: '/',
+    //   name: 'HelloWorld',
+    //   component: HelloWorld
+    // },
     {
       path: '/home',
       name: 'home',
