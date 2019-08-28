@@ -2,7 +2,7 @@
  * @Author: 刘攀
  * @Date: 2019-08-28 15:57:26
  * @LastEditors: 刘攀
- * @LastEditTime: 2019-08-28 16:32:06
+ * @LastEditTime: 2019-08-28 17:21:41
  * @Description: file content
  -->
 <template>
@@ -15,7 +15,7 @@ export default {
   name: 'home',
   data () {
     return {
-      hometitle: '首页'
+      hometitle: '首页标题'
     }
   }
 }
