@@ -2,12 +2,11 @@
  * @Author: 刘攀
  * @Date: 2019-08-28 15:15:17
  * @LastEditors: 刘攀
- * @LastEditTime: 2019-08-28 16:08:00
+ * @LastEditTime: 2019-08-28 17:50:41
  * @Description: file content
  -->
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
     <router-view/>
   </div>
 </template>
