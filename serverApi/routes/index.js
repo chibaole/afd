@@ -2,7 +2,7 @@
  * @Author: 刘攀
  * @Date: 2018-11-13 10:16:21
  * @LastEditors: 刘攀
- * @LastEditTime: 2019-08-29 14:27:40
+ * @LastEditTime: 2019-08-29 14:57:34
  * @Description: file content
  */
 /**
@@ -53,6 +53,6 @@ const controllers = require('../controllers')
 // router.post('/wx/save_user_info', controllers.saveUserinfo)
 // 验证 公众号  接口配置 url
 
-router.get('/wxToken', controllers.wxToken)
+router.get('/', controllers.wxToken)
 
 module.exports = router
