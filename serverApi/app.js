@@ -1,25 +1,33 @@
 /*
  * @Author: 刘攀
- * @Date: 2018-09-26 13:56:37
+ * @Date: 2019-08-29 15:44:13
  * @LastEditors: 刘攀
- * @LastEditTime: 2019-08-29 14:25:08
+ * @LastEditTime: 2019-08-29 17:36:31
  * @Description: file content
  */
 const Koa = require('koa')
 const app = new Koa()
-const debug = require('debug')('koa-weapp-demo')
-const response = require('./middlewares/response')
-const bodyParser = require('koa-bodyparser')
-app.use(bodyParser())
+const crypto = require('crypto')
+const config = require('./config')
+app.use(async ctx => {
+  const {
+    signature,
+    timestamp,
+    nonce,
+    echoster
+  } = ctx.query
+  const token = config.wechat.token
+  let hash = crypto.createHash('sha1')
+  const arr = [token, timestamp, nonce].sort()
+  hash.update(arr.join(''))
+  const shasum = hash.digest('hex')
+console.log(signature)
+console.log(shasum)
+  if (shasum === signature) {
+    return ctx.body = echoster
+  }
+  ctx.status = 401
+  ctx.body = 'invalid signature'
 
-app.use(response)
-
-// 引入路由分发
-const router = require('./routes')
-app.use(router.routes())
-// 使用响应处理中间件
-// 解析请求体
-// app.use(bodyParser())
-
-// 启动程序，监听端口
-app.listen(3030, () => debug(`listening on port 3030`))
+})
+app.listen(8081)
