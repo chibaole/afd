@@ -1,3 +1,10 @@
+/*
+ * @Author: 刘攀
+ * @Date: 2019-08-28 15:15:17
+ * @LastEditors: 刘攀
+ * @LastEditTime: 2019-08-29 18:02:06
+ * @Description: file content
+ */
 // https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
@@ -22,7 +29,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     // allow async-await
-    'generator-star-spacing': 'off',
+    // 'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
