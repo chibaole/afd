@@ -2,7 +2,7 @@
  * @Author: 刘攀
  * @Date: 2019-08-29 15:44:13
  * @LastEditors: 刘攀
- * @LastEditTime: 2019-09-02 10:13:36
+ * @LastEditTime: 2019-09-02 11:16:22
  * @Description: file content
  */
 'use strict'
@@ -17,7 +17,7 @@ const debug = require('debug')('koa-weapp-demo')
 const response = require('./middlewares/response')
 const bodyParser = require('koa-bodyparser')
 
-const router = require('./router')
+const router = require('./routes')
 
 
 
@@ -26,7 +26,7 @@ app.use(bodyParser())
 
 app.use(response)
 
-app.use(router())
+app.use(router.routes())
 // app.use(async (ctx) => {
 //   // TODO
 //   const result = await api.addConditionalMenu(menu2)
