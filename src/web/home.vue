@@ -2,14 +2,13 @@
  * @Author: 刘攀
  * @Date: 2019-08-28 15:57:26
  * @LastEditors: 刘攀
- * @LastEditTime: 2019-08-29 15:36:59
+ * @LastEditTime: 2019-09-02 10:19:42
  * @Description: file content
  -->
 <template>
   <div :class="$style.homePage">
     {{hometitle}}
-
-    <button class="btn">
+    <button class="btn" @click="createMenu">
              <span class="badge badge-primary">创建自定义菜单</span>
     </button>
     </div>
@@ -26,14 +25,19 @@ export default {
     };
   },
   methods: {
-    async checkToken() {
+    async createMenu() {
+          // 获取token验证
+          console.log('创建公众号菜单')
       try {
-        const response = await axios.get("http://7b22078e.ngrok.io/api/v1/menu");
+        const response = await axios.get("http://49.235/131/207/crateMenu");
         console.log(response);
       } catch (error) {
         console.error(error);
       }
     }
+  },
+  mounted(){
+    // this.checkToken()
   }
 };
 </script>
