@@ -2,11 +2,11 @@
  * @Author: 刘攀
  * @Date: 2019-08-29 15:44:13
  * @LastEditors: 刘攀
- * @LastEditTime: 2019-09-02 11:16:22
+ * @LastEditTime: 2019-09-03 12:27:10
  * @Description: file content
  */
 'use strict'
-
+// 新的热修复分支
 const Koa = require('koa')
 const app = new Koa()
 const wechat = require('./wechat/wechat')
