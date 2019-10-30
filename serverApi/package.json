@@ -9,7 +9,7 @@
   "author": "liupanpan",
   "license": "ISC",
   "devDependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.18.1",
     "debug": "^4.1.1",
     "ejs": "^2.6.2",
     "fs-extra": "^5.0.0",
